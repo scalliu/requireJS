@@ -1,0 +1,231 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为home.less文件夹
+@import url("../../public/css/lib.less");
+body,
+html {
+    height: 100%;
+}
+div.market_contain {
+    .bg(#fff);
+    top: 1.4rem;
+    overflow: scroll;
+    bottom: 1.5625rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    //左侧导航栏
+
+    > nav.categoryLeftWrap {
+        position: relative;
+        height: 100%;
+        width: 23%;
+        .bg(#F8F8F8);
+        > article.categoryWrap-left {
+            top: 0;
+            left: 0;
+            width: 100%;
+            position: absolute;
+            //给溢出的父添加滚动条.
+            //给溢出的添加绝对定位, 脱离文档流,防止body一起移动
+            overflow-y: scroll;
+            height: 100%;
+            &::-webkit-scrollbar {
+                width: 0.1562rem;
+                height: 0.1562rem;
+                background-color: gold;
+            }
+            > li.categoryLeftItems {
+                position: relative;
+                height: 1.25rem;
+                width: 100%;
+                text-align: center;
+                .lh(1.25rem);
+                ~li {
+                    border-top: 0.0312rem solid #eee;
+                }
+                //选中添加样式
+                &.active {
+                    &:after {
+                        content: ".";
+                        color: transparent;
+                        width: 0.2343rem;
+                        height: 80%;
+                        .bg(#ffd600);
+                        left: 0;
+                        top: 10%;
+                        display: block;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+    }
+    //右侧内容区域
+    > main.categoryWrap {
+        position: absolute;
+        left: 24%;
+        width: 76%;
+        top: 0;
+        height: 100%;
+        //排序
+        section.categoryFixTop {
+            position: absolute;
+            left: -0.0156rem;
+            right: 0;
+            top: 0;
+            z-index: 10;
+            overflow: hidden;
+            background: white;
+            > div {
+                width: 50%;
+                height: 1.25rem;
+                .lh(1.25rem);
+                position: relative;
+                text-align: center;
+                .fl;
+                &:first-child {
+                    &:before {
+                        content: " ";
+                        width: 0.0312rem;
+                        height: 70%;
+                        .bg(red);
+                        right: -0.1506rem;
+                        top: 15%;
+                        display: block;
+                        position: absolute;
+                    }
+                }
+                > li {
+                    &:after {
+                        content: " ";
+                        background: url("../img/down.png");
+                        background-repeat: no-repeat;
+                        height: 60%;
+                        background-size: 0.4rem;
+                        width: 0.7rem;
+                        left: 70%;
+                        top: 30%;
+                        display: block;
+                        position: absolute;
+                    }
+                }
+            }
+        }
+        //产品展示区
+        article.categoryWrap-right {
+            position: relative;
+            height: 100%;
+            overflow-y: scroll;
+            //主要产品
+            > section.categoryBan {
+                margin-top: 1.25rem;
+                height: 5000px;
+                > a {
+                    display: block;
+                    > figure.content_main_items {
+                        height: 2.7968rem;
+                        .c(black);
+                        ~figure {
+                            border-top: 1px solid #eee;
+                        }
+                        > img {
+                            width: 35%;
+                            .fl;
+                            height: 100%;
+                        }
+                        > ul.content_main_item {
+                            width: 63%;
+                            position: relative;
+                            .fl;
+                            > li {
+                                margin-top: 0.2343rem;
+                                //商品名字
+                                &.content_main_items {
+                                    .fS(0.375rem);
+                                    .textIndex1;
+                                }
+                                //商品推荐
+                                &.main_items_info_chosen {
+                                    padding: 0.0312rem;
+                                    .fS( 0.3125rem);
+                                    > span {
+                                        padding: 0.0468rem;
+                                        border: 0.0156rem solid red;
+                                        border-radius: 0.125rem;
+                                        .c(red);
+                                        &.pm_desc {
+                                            background: red;
+                                            .c(white);
+                                            margin-left: 0.0781rem;
+                                        }
+                                    }
+                                }
+                                //商品容量
+                                &.main_items_intr {
+                                    .c(#a8a8a8);
+                                    .fS( 0.25rem);
+                                }
+                                //商品价格
+                                &.main_items_price {
+                                    .c(red);
+                                    > span {
+                                        .fS(0.3125rem);
+                                        .fl;
+                                    }
+                                    > span.pre_price {
+                                        text-decoration: line-through;
+                                        .c(#a8a8a8);
+                                        margin-left: 0.0781rem;
+                                    }
+                                }
+                                //购买商品数量
+                                &.main_items_count {
+                                    height: 1.0156rem;
+                                    position: absolute;
+                                    right: 0.1562rem;
+                                    bottom: 0.0156rem;
+                                    .c(red);
+                                    width: 2.7343rem;
+                                    margin: 0;
+                                    > span {
+                                        position: absolute;
+                                        top: 0;
+                                        width: 0.9062rem;
+                                        height: 0.9062rem;
+                                        border: 1px solid red;
+                                        border-radius: 50%;
+                                        background: #ff0000;
+                                        background-size: 200% 100%;
+                                        //减少
+                                        &.del_inco {
+                                            left: 0;
+                                            background-image: url("http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png");
+                                            background-repeat: no-repeat;
+                                            background-position: left center;
+                                        }
+                                        //数量
+                                        &.shopping_num {
+                                            left: 1.2rem;
+                                            top: 0.25rem;
+                                            border: none;
+                                            .bg(none);
+                                        }
+                                        //增加
+                                        &.ali_inco {
+
+                                            right: 0.1562rem;
+                                            background-image: url("http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png");
+                                            background-repeat: no-repeat;
+                                            background-position: right center;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

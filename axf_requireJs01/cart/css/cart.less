@@ -1,0 +1,259 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为home.less文件夹
+@import url("../../public/css/lib.less");
+
+//car开始
+
+div.car_containWrap {
+    padding: 0.1px;
+    //-----------购物车头部
+    > header.car_title {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1.4062rem;
+        .lh(1.4062rem);
+        text-align: center;
+        .fS( 0.4375rem);
+        .c(black);
+        font-weight: bold;
+        .bg(white);
+    }
+    //-----------购物车详情
+    > div.car_contain {
+        .bg(#fff);
+        top: 1.4062rem;
+        overflow: scroll;
+        bottom: 1.5625rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        //-----------用户信息
+        > div.car_user_msgWrap {
+            padding-left: 0.3906rem;
+            border-top: 0.0937rem solid #eee;
+            .bg(white);
+            > a {
+                padding-top: 0.0625rem;
+                background: url("../img/borderbg.png") repeat-x left top,url("../img/borderbg.png") repeat-x left bottom;
+                > p {
+                    &.direction {
+                        height: 1.4062rem;
+                        .lh(1.4062rem);
+                        text-align: center;
+                        display: none;
+                    }
+                    > span {
+                        .fl;
+                        height: 0.825rem;
+                        .lh(0.825rem);
+                        display: inline-block;
+                        font-size: 0.375rem;
+                        .c(black);
+                        &:first-child {
+                            width: 1.5625rem;
+                            text-align: justify;
+                            margin-right: 0.1562rem;
+                            > i {
+                                width: 100%;
+                                display: inline-block;
+                            }
+                        }
+                        &.shouhuo_change {
+                            .fl(right);
+                            margin-right: 0.3125rem;
+                        }
+                    }
+                }
+            }
+        }
+        //闪购超市和其他
+        > ul.car_content {
+
+            margin-top: 0.3125rem;
+            .bg(white);
+            li {
+                padding-left: 0.3906rem;
+                ~li {
+                    border-top: 1px solid #EEAAEE;
+                }
+                //闪购超市
+                &.quickSuper {
+                    > p {
+                        height: 0.8593rem;
+                        .lh(0.8593rem);
+                        &.quickSuper_coudan {
+                            position: relative;
+                            span {
+                                display: block;
+                                position: relative;
+                                padding-left: 0.3343rem;
+                                &:first-child {
+                                    &:after {
+                                        content: ".";
+                                        color: transparent;
+                                        width: 0.2343rem;
+                                        height: 70%;
+                                        .bg(#ffd600);
+                                        left: 0;
+                                        top: 20%;
+                                        display: block;
+                                        position: absolute;
+                                    }
+                                }
+                                &:last-child {
+                                    position: absolute;
+                                    right: 0.1562rem;
+                                    top: 0.0781rem;
+                                    border: 1px solid red;
+                                    border-radius: 0.3125rem/0.4687rem;
+                                    padding: 0 0.5rem;
+                                }
+                            }
+                        }
+                    }
+                }
+                //&收货事件和备注
+                &.receive,
+                &.receive_other {
+                    height: 1.4843rem;
+                    .lh(1.4843rem);
+                }
+                //收货时间
+                &.receive {
+                    > span {
+                        .fl();
+                        &.timeInf {
+                            .c(red);
+                            padding: 0 0.1562rem;
+                        }
+                        &.receive_order {
+                            .fl(right);
+                            padding-right: 0.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        //用户购物车商品
+        > ul.car_contentInfs {
+            //商品列表
+            > li.car_contentInfs_items {
+                border-top: 1px solid #EEAAEE;
+                height: 2.5rem;
+                .bg(white);
+                > div.items_checkbox {
+                    .fl();
+                    width: 16.4%;
+                    height: 100%;
+                    .bgImg("../img","weixuanze.png");
+                    background-size: 30%;
+                }
+                > a.items_content {
+                    .fl();
+                    width: 83.6%;
+                    height: 100%;
+                    position: relative;
+                    > figure {
+                        height: 100%;
+                        > img {
+                            width: 1.6093rem;
+                            padding-top: 0.4687rem;
+                            .fl;
+                        }
+                        > figcaption.content_main_items {
+                            .fl;
+                            padding-left: 0.2343rem;
+                            width: 6.5625rem;
+                            height: 100%;
+                            position: relative;
+                            > p {
+                                &.main_items_price,
+                                &.main_items_title {
+                                    width: 100%;
+                                    .lh(1.25rem);
+                                }
+                                //购买商品数量
+                                &.main_items_count {
+                                    height: 1.0156rem;
+                                    position: absolute;
+                                    right: 0.1562rem;
+                                    bottom: 0.4rem;
+                                    .c(red);
+                                    width: 2.7343rem;
+                                    margin: 0;
+                                    > span {
+                                        position: absolute;
+                                        height: 1rem;
+                                        width: 1rem;
+                                        border-radius: 50%;
+                                        border: 1px solid red;
+                                        //减少
+                                        &.del_inco {
+                                            left: 0;
+                                            .bg(red);
+                                            z-index: 1;
+                                            background-image: url("http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png");
+                                            background-repeat: no-repeat;
+                                            background-position: left center;
+                                            background-size: 200% 100%;
+                                        }
+                                        //数量
+                                        &.shopping_num {
+                                            left: 1.3rem;
+                                            top: 0.35rem;
+                                            border: none;
+                                        }
+                                        //增加
+                                        &.ali_inco {
+                                            right: 0;
+                                            z-index: 1;
+                                            .bg(red);
+                                            background-image: url("http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png");
+                                            background-repeat: no-repeat;
+                                            background-position: right center;
+                                            background-size: 200% 100%;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            //商品结算菜单
+            > li.total {
+                height: 1.5625rem;
+                .lh(1.5625rem);
+                align-items: center;
+                .bg(white);
+                display: flex;
+                > div.items_checkbox {
+                    flex: 1 0 16.4%;
+                    height: 100%;
+                    .bgImg("../img","weixuanze.png");
+                    background-size: 30%;
+                }
+                > p {
+                    &.choose_ok {
+                        flex: 1 1 52.35%;
+                        .c(black);
+                        > span.total {
+                            padding-left: 0.5rem;
+                        }
+                        > span.total_price {
+                            .c(red);
+                        }
+                    }
+                    &.choose_no {
+                        flex: 1 1 31.25%;
+                        text-align: center;
+                        .bg(yellow);
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,248 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为home.less文件夹
+@import url("../../public/css/lib.less");
+//@import url("./lib.less");
+//home页面内容
+//修改swiper分页器
+#home {
+    .bg(#fff);
+    top: 1.4062rem;
+    overflow: scroll;
+    bottom: 1.5625rem;
+    position: absolute;
+    left: 0;right: 0;
+       //设置了heigth:100%后加上margin 或者padding都会影响
+    > .home_content {
+        //-------------banner部分S
+        > section.home_top_banner {
+            //swiper 样式
+            > div.swiper-container {
+                img{
+                    width: 100%;
+                }
+                //按钮样式
+                > .swiper-pagination {
+                    > .swiper-pagination-bullet {
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        .lh(0.5rem);
+                        display: inline-block;
+                        border-radius: 100%;
+                        background: #000;
+                        opacity: 0.8;
+                        color: white;
+                    }
+                }
+            }
+
+        }
+        //----------------home页面主导航
+        > section.home_totalNavWrap {
+            > nav.home_totalNav {
+                display: flex;
+                flex-wrap: wrap;
+                padding: 0.1562rem 0 0 0.3906rem;
+                > li.items {
+                    flex: 1 1 25%;
+                    > a {
+                        display: block;
+                        text-align: center;
+                        > span {
+                            .c(black);
+                            display: block;
+                        }
+                    }
+                }
+            }
+        };
+        //--------------home头条
+        section.home_toutiaoWrap {
+            > ul.home_toutiao {
+                .bg(#eee);
+                padding: 0.0781rem 0;
+                > li.items {
+                    .fl;
+                    text-align: center;
+                    height: 0.6875rem;
+                    .lh(0.6875rem);
+                    &:nth-child(1) {
+                        width: 2.2968rem;
+                        border-right: 1px solid #eee;
+                    }
+                    > a {
+                        display: block;
+                        > span {
+                            border: 1px solid red;
+                            margin: 0 0.0468rem;
+                            border-radius: 0.0937rem;
+                            .fS(24px);
+                            .c(red);
+                        }
+                    }
+                }
+            }
+        }
+        section.home_block {
+            //----------一行
+            margin-top: 0.3125rem;
+            > ul.act_item.rows-one {
+                display: flex;
+                > li.act_items {
+                    flex: 1 1 33.333%;
+                    +li {
+                        margin-left: 0.0312rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            //-----------二行
+            > ul.act_item.rows-two {
+                display: block;               
+                > li.act_items {
+                    flex:none;
+                    width: 49%;
+                    .fl();
+                    +li {
+                        margin-left: 0.0312rem;
+                    }
+                    img{
+                        width: 100%;
+                    }
+                }
+            }
+            //-----------------优选水果
+            &[class~="home_fruit"] {
+                .bg(white);
+                > div.home_fruit_title {
+                    padding: 0 0.3125rem;
+                    > a {
+                        display: block;
+                        img{
+                            width: 100%;
+                        }
+                    }
+                    > a:first-child {
+                        .lh(1.25rem);
+                        height: 1.25rem;
+                        > span {
+                            .fl;
+                            position: relative;
+                            .fS(0.4687rem);
+                            padding-left: 0.2343rem;
+                            .c(#F38631);
+                            &:first-child:before {
+                                content: ".";
+                                color: transparent;
+                                width: 0.2343rem;
+                                height: 55%;
+                                .bg(#F38631);
+                                left: 0;
+                                top: 15%;
+                                display: block;
+                                position: absolute;
+                            }
+                            &:nth-child(2) {
+                                .fl(right);
+                                margin-left: 0.0781rem;
+                                .fS(0.3125rem);
+                                .c(black);
+                                >img{
+                                    width: 100%;
+                                }
+                            }
+                        }
+                    }
+                }
+                > div.home_fruit_banner {
+                    padding-left:0.3125rem > a {
+                        display: block;
+                    }
+                }
+                > div.fruit_fruit_infoWrap {
+                    .bg(#eee);
+                     padding-left: 0.0625rem;
+                     margin-top:0.3125rem;
+                    ul.fruit_info {
+                        .fS(0.3437rem);
+                        width:33%;
+                        .fl();
+                        .bg(white);
+                        padding-left:0.1562rem;
+                        //相邻兄弟元素
+                        ~ul {
+                             border-left:2px solid red;
+                        }
+                        > li {
+                            width: 100%;
+                            margin-top: 0.1562rem;
+                            //图片
+                            &.fruit_items_img{
+                                text-align: center;
+                                img{
+                                    width: 90%;
+                                }
+                            }
+                            //物品名字
+                            &.fruit_items_title {
+                                .textIndex1;
+                                padding-right:0.625rem;
+                            }
+                            &.fruit_items_chosen {
+                                > span {
+                                    padding: 0.0468rem;
+                                    .fS(0.3125rem);
+                                    border: 1px solid red;
+                                    border-radius: 0.0937rem;
+                                    .c(red);
+                                    &.song {
+                                        .bg(red);
+                                        .c(white);
+                                        margin-left: 0.1718rem;
+                                    }
+                                    //价格
+                                    &.price_inco,
+                                    &.price_inco2 {
+                                        .fS(0.2812rem);
+                                    }
+                                }
+                            }
+                            //物品价格
+                            &.fruit_items_desc {
+                                position: relative;
+                                padding-bottom: 0.3rem;
+                                > span {
+                                    .c(#eee) &.fruit_items_intr {
+                                        display: block;
+                                        margin: 0 0 0.1562rem;
+                                    }
+                                }
+                                > span.fruit_pre_prece {
+                                    text-decoration: line-through;
+                                    .c(#bebebe);
+                                }
+                                > span.fruit_bg {
+                                    position: absolute;
+                                    top: 0;
+                                    right: 0.1562rem;
+                                    width: 0.9062rem;
+                                    height: 0.9062rem;
+                                    border: 1px solid red;
+                                    border-radius: 50%;
+                                    .bg(red);
+                                    background-size: 200% 100%;
+                                    background-image: url("http://m.beequick.cn/static/bee/img/m/product_operate-57bf1d7b.png");
+                                    background-repeat: no-repeat;
+                                    background-position: right center;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+}

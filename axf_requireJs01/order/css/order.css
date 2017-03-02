@@ -1,0 +1,131 @@
+@charset "utf-8";
+.min-w {
+  min-width: 1200px;
+}
+.marginA {
+  margin: 0 auto;
+}
+.clearFloat {
+  zoom: 1;
+  /*为兼容IE6,IE7*/
+}
+.clearFloat::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}
+div.order_containWrap {
+  padding: 0.1px;
+  height: 100%;
+  position: relative;
+}
+div.order_containWrap > header.order_headerTop {
+  height: 1.4062rem;
+  line-height: 1.4062rem;
+  background: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+div.order_containWrap > main.order_contain {
+  background: #ffffff;
+  top: 1.4062rem;
+  overflow: scroll;
+  bottom: 1.5625rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+div.order_containWrap > main.order_contain > nav.order_subNav {
+  background: #ffffff;
+  display: flex;
+  flex-wrap: wrap;
+  border-top: 0.1562rem solid #ccc;
+  border-bottom: 1px solid #a0a0a0;
+}
+div.order_containWrap > main.order_contain > nav.order_subNav > li {
+  flex: 1 1 1.7rem;
+  height: 1.0937rem;
+  line-height: 1.0937rem;
+  text-align: center;
+  border-bottom: 1px solid #EEEEEE;
+  padding: 0 0.2rem;
+}
+div.order_containWrap > main.order_contain > nav.order_subNav > li > a {
+  position: relative;
+  font-size: 0.375rem;
+}
+div.order_containWrap > main.order_contain > nav.order_subNav > li > a.active {
+  color: #000000;
+}
+div.order_containWrap > main.order_contain > nav.order_subNav > li > a.active:after {
+  position: absolute;
+  bottom: -1px;
+  display: block;
+  content: "";
+  width: 100%;
+  height: 1px;
+  background: red;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent {
+  background: #ffffff;
+  border-top: 1px solid #a0a0a0;
+  border-bottom: 1px solid #a0a0a0;
+  margin-top: 0.3125rem;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent > header.mainContent_header {
+  height: 0.9375rem;
+  line-height: 0.9375rem;
+  font-size: 0.4rem;
+  padding-left: 0.4562rem;
+  position: relative;
+  border-bottom: 1px solid #666666;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent > header.mainContent_header:after {
+  content: "";
+  width: 0.2343rem;
+  height: 60%;
+  background: deepskyblue;
+  left: 0.1562rem;
+  top: 20%;
+  display: block;
+  position: absolute;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure {
+  display: flex;
+  border-bottom: 1px solid #666666;
+  height: 3.5156rem;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure > img {
+  flex: 0 0;
+  width: 40%;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure > figcaption.imgInfo {
+  position: relative;
+  flex: 1 1 60%;
+  display: flex;
+  flex-direction: column;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure > figcaption.imgInfo > p {
+  width: 100%;
+  height: 100%;
+  flex: 1 0;
+  font-size: 0.4rem;
+  padding-top: 0.4062rem;
+  padding-right: 0.9375rem;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure > figcaption.imgInfo > p.info_price {
+  font-size: 0.4375rem;
+  color: #ff0000;
+  font-weight: bold;
+}
+div.order_containWrap > main.order_contain > main.order_mainContent section.mainContent_items > figure > figcaption.imgInfo > p.imgCart {
+  padding: 0;
+  width: 1.1718rem;
+  height: 1.1718rem;
+  position: absolute;
+  right: 0.7125rem;
+  bottom: 0.1562rem;
+}

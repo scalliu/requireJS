@@ -1,0 +1,101 @@
+ @charset "utf-8";
+//公用颜色
+.c(@c){
+  color:@c;
+}
+//最小宽度
+.min-w{
+    min-width:1200px;
+}
+//居中
+.marginA{
+    margin:0 auto;
+}
+//行高
+.lh(@lh){
+  line-height:@lh;
+}
+//背景
+.bg(@c:#fff){
+    background:@c;
+}
+//公用宽高 
+.common-w-h-border-bg(@wh,@w,@h)when(@wh = wh){
+  width:@w;
+  height:@h;
+}
+//公用宽高边框
+.common-w-h-border-bg(@whb,@w,@h,@b:1px,@color:transparent)when(@whb = whb){
+  width:@w;
+  height:@h;
+  border:@b solid @color;
+}
+//公用宽高背景
+.common-w-h-border-bg(whbg,@w,@h,@bgC:#fff)when(whbg = whbg){
+  width:@w;
+  height:@h;
+  background:@bgC;
+}
+//文本省略号
+.textIndex(){
+  overflow : hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  font-weight: 500;
+}
+//背景图
+.bgImg(@ad:"",@img,@re:no-repeat,@p:center){
+  background:url("@{ad}/@{img}") @re @p;
+}
+//margin 取值
+.mg(@t,@r,@b,@l){
+  margin:@t @r @b @l
+}
+//公用的字体
+.fS(@f:14px){
+  font-size:@f
+}
+//浮动
+.fl(@left:left){
+  float:@left;
+}
+//填充
+.padding(@lr){
+  padding:0 @lr;
+}
+//清除浮动
+.clearFloat{
+  zoom:1;/*为兼容IE6,IE7*/
+  &::after{
+    content:".";
+    visibility: hidden;
+    height:0;
+    clear:both;
+    display: block;
+  }
+}
+
+//文字隐藏----2行
+.textIndex2(@clomn:2){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: @clomn;
+    -webkit-box-orient: vertical;
+}
+
+//文字隐藏单行----1行
+.textIndex1(@clomn:1){
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+
+
+
+
+
+ 

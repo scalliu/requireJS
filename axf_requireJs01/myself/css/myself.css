@@ -1,0 +1,157 @@
+@charset "utf-8";
+.min-w {
+  min-width: 1200px;
+}
+.marginA {
+  margin: 0 auto;
+}
+.clearFloat {
+  zoom: 1;
+  /*为兼容IE6,IE7*/
+}
+.clearFloat::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}
+div.myself_contain {
+  background: #ffffff;
+  top: 0;
+  overflow: scroll;
+  bottom: 1.5625rem;
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+div.myself_contain > header.myself_headerWrap {
+  height: 4.2187rem;
+  width: 100%;
+  background: #ffd600;
+}
+div.myself_contain > header.myself_headerWrap > a {
+  height: 74%;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li {
+  float: left;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li.myself_headerLog {
+  width: 27%;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li.myself_tel {
+  width: 57%;
+  font-weight: bold;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li.myself_tel p:first-child {
+  font-size: 0.4375rem;
+  color: #ffffff;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li.myself_tel p:last-child {
+  margin-top: 0.3125rem;
+  font-size: 0.3125rem;
+  color: #ff0000;
+  text-indent: 0.8rem;
+  background: url("../img/logon.png") no-repeat left;
+}
+div.myself_contain > header.myself_headerWrap > a > ul.myself_header > li.myself_right {
+  width: 16%;
+  text-align: center;
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme {
+  height: 26%;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.2);
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme > li {
+  height: 100%;
+  flex: 1 1 50%;
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme > li:nth-child(2) {
+  flex: 0 0 1px;
+  border: 1px solid white;
+  height: 60%;
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme > li > a {
+  color: #ffffff;
+  height: 100%;
+  line-height: 1.0937rem;
+  text-align: center;
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme > li > a > span {
+  font-size: 0.375rem;
+  float: left;
+}
+div.myself_contain > header.myself_headerWrap > ul.favorite_theme > li > a > img {
+  float: left;
+  margin: 0.2031rem 0.2031rem 0 1.1875rem;
+}
+div.myself_contain div.myself_ordered_wrap {
+  background: #eeeeee;
+  color: #000000;
+  padding-top: 0.1px;
+  margin-top: 0.3125rem;
+}
+div.myself_contain div.myself_ordered_wrap > div.myself_ordered_title {
+  background: #ffffff;
+  padding: 0.5rem 0.2812rem;
+}
+div.myself_contain div.myself_ordered_wrap > div.myself_ordered_title > span {
+  float: left;
+}
+div.myself_contain div.myself_ordered_wrap > div.myself_ordered_title > span:last-child {
+  float: right;
+}
+div.myself_contain div.myself_ordered_wrap > ul.myself_ordered_info {
+  display: flex;
+  height: 2.1875rem;
+  align-items: center;
+  background: #ffffff;
+  margin-top: 0.0468rem;
+}
+div.myself_contain div.myself_ordered_wrap > ul.myself_ordered_info > li {
+  color: #000000;
+  flex: 1 1 2.2656rem;
+  text-align: center;
+}
+div.myself_contain div.myself_ordered_wrap > ul.myself_ordered_info > li > span {
+  display: block;
+  margin-top: 0.3125rem;
+}
+div.myself_contain > div.myself_other > ul.myself_other_item {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  background: #ffffff;
+  height: 6.25rem;
+  margin-top: 0.0468rem;
+}
+div.myself_contain > div.myself_other > ul.myself_other_item > li {
+  color: #000000;
+  flex: 1 1 2.2656rem;
+  text-align: center;
+  height: 2.3437rem;
+}
+div.myself_contain > div.myself_other > ul.myself_other_item > li:nth-child(4) ~ li {
+  border-top: 2px solid #eee;
+}
+div.myself_contain > div.myself_other > ul.myself_other_item > li > span {
+  display: block;
+  margin-top: 0.3125rem;
+}
+div.myself_contain footer.myself_exit {
+  background: #ffffff;
+  color: #000000;
+  margin-top: 0.4062rem;
+  height: 1.5625rem;
+  line-height: 1.5625rem;
+  text-align: center;
+  color: #666666;
+}

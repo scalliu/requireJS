@@ -1,0 +1,18 @@
+@charset "utf-8";
+.min-w {
+  min-width: 1200px;
+}
+.marginA {
+  margin: 0 auto;
+}
+.clearFloat {
+  zoom: 1;
+  /*为兼容IE6,IE7*/
+}
+.clearFloat::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}

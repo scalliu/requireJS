@@ -1,0 +1,128 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为home.less文件夹
+@import url("../../public/css/lib.less");
+
+//---------新鲜购物开始
+div.order_containWrap {
+    padding: 0.1px;
+    height: 100%;
+    position: relative;
+    //  新鲜购物标题
+    > header.order_headerTop {
+        height: 1.4062rem;
+        .lh(1.4062rem);
+        .bg(white);
+        text-align: center;
+        font-weight: bold;
+        .fS(0.5rem);
+    }
+    //新鲜购物页面详情
+    > main.order_contain {
+        //      新鲜购物主导航
+        .bg(#fff);
+        top: 1.4062rem;
+        overflow: scroll;
+        bottom: 1.5625rem;
+        position: absolute;
+        left: 0;
+        right: 0;
+        > nav.order_subNav {
+            .bg(white);
+            display: flex;
+            flex-wrap: wrap;
+            border-top: 0.1562rem solid #ccc;
+            border-bottom: 1px solid #a0a0a0;
+            > li {
+                flex: 1 1 1.7rem;
+                height: 1.0937rem;
+                .lh(1.0937rem);
+                text-align: center;
+                border-bottom: 1px solid #EEEEEE;
+                padding: 0 0.2rem;
+                > a {
+                    position: relative;
+                    .fS(0.375rem);
+                    &.active {
+                        .c(black);
+                        &:after {
+                            position: absolute;
+                            bottom: -1px;
+                            display: block;
+                            content: "";
+                            width: 100%;
+                            height: 1px;
+                            background: red;
+                        }
+                    }
+                }
+            }
+        }
+        //新鲜购物主产品
+        > main.order_mainContent {
+            .bg(white);
+            border-top: 1px solid #a0a0a0;
+            border-bottom: 1px solid #a0a0a0;
+            margin-top: 0.3125rem;
+            //主产品标题
+            > header.mainContent_header {
+                height: 0.9375rem;
+                .lh(0.9375rem);
+                .fS(0.4rem);
+                padding-left: 0.4562rem;
+                position: relative;
+                border-bottom: 1px solid #666666;
+                &:after {
+                    content: "";
+                    width: 0.2343rem;
+                    height: 60%;
+                    background: deepskyblue;
+                    left: 0.1562rem;
+                    top: 20%;
+                    display: block;
+                    position: absolute;
+                }
+            }
+            //主产品介绍
+            section.mainContent_items {
+                > figure {
+                    display: flex;
+                    border-bottom: 1px solid #666666;
+                    height: 3.5156rem;
+                    > img {
+                        flex: 0 0;
+                        width: 40%;
+                    }
+                    > figcaption.imgInfo {
+                        position: relative;
+                        flex: 1 1 60%;
+                        display: flex;
+                        flex-direction: column;
+                        > p {
+                            width: 100%;
+                            height: 100%;
+                            flex: 1 0;
+                            .fS(0.4rem);
+                            padding-top: 0.4062rem;
+                            padding-right: 0.9375rem;
+                            &.info_price {
+                                .fS(0.4375rem);
+                                .c(red);
+                                font-weight: bold;
+                            }
+                            &.imgCart {
+                                padding: 0;
+                                width: 1.1718rem;
+                                height: 1.1718rem;
+                                position: absolute;
+                                right: 0.7125rem;
+                                bottom: 0.1562rem;
+
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

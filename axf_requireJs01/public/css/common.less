@@ -1,0 +1,154 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为common.less文件夹
+@import url("./lib.less");
+
+//设置页面最大宽度 max-width:750px
+//------------公共样式头部
+header.ajx_header {
+    .bg(#ffd600);
+    //设置最小宽度,当页面加载的后在切换为rem
+    min-height: 80px;
+    height: 1.4062rem;
+    .lh(1.4062rem);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 33;
+    > .header_sao {
+        position: absolute;
+        left: 0.1562rem;
+        top: 0;
+    }
+    > .header_add {
+        .marginA;
+        .fS(0.4375rem);
+        width: 100%;
+        text-align: center;
+    }
+    > .header_search {
+        position: absolute;
+        right: 0.1562rem;
+        top: 0;
+        background-size: 80%;
+        background-image: url("../img/search.png");
+        background-repeat: no-repeat;
+        background-position: center 0.1562rem;
+        > span {
+            display: block;
+            .lh(0);
+            margin-top: 1.0937rem;
+        }
+    }
+}
+
+//单页面加载样式
+div.index_containWrap {
+    position: relative;
+    height: 100%;
+    margin: 0 auto;
+}
+
+//------------公共样式尾部
+footer.ajx_headerWrap {
+    .bg(white);
+    z-index: 33;
+    margin: 0 auto;
+    overflow: hidden;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    .ajx_header {
+        display: flex;
+        > li {
+            flex: 1 1 1.7968rem;
+            text-align: center;
+            //选中css
+            &.active {
+                > a {
+                    animation: mymove 500ms !important;
+                    -webkit-animation: mymove 500ms !important;
+                    /* Safari and Chrome */
+                }
+                /* Safari and Chrome */
+                @-webkit-keyframes mymove {
+                    0% {
+                        background-size: 40%;
+                    }
+                    25% {
+                        background-size: 55%;
+                    }
+                    50% {
+                        background-size: 50%;
+                    }
+                    75% {
+                        background-size: 55%;
+                    }
+                    100% {
+                        background-size: 40%;
+                    }
+                }
+                &:nth-child(1) {
+                    > a {
+                        .bgImg("../img","home2.png",no-repeat,center);
+                    }
+                };
+                &:nth-child(2) {
+                    > a {
+                        .bgImg("../img","shop2.png",no-repeat,center)
+                    }
+                };
+                &:nth-child(3) {
+                    > a {
+                        .bgImg("../img","foudre2.png",no-repeat,center)
+                    }
+                };
+                &:nth-child(4) {
+                    > a {
+                        .bgImg("../img","order2.png",no-repeat,center)
+                    }
+                };
+                &:nth-child(5) {
+                    > a {
+                        .bgImg("../img","my2.png",no-repeat,center)
+                    }
+                }
+            }
+            //没有选中css
+            > a {
+                height: 1.65rem;
+                .c(#777);
+                padding-top: 1.3rem;
+                background-size: 40%;
+            }
+            &:nth-child(1) {
+                > a {
+                    .bgImg("../img","home.png",no-repeat,center)
+                }
+            };
+            &:nth-child(2) {
+                > a {
+                    .bgImg("../img","shop.png",no-repeat,center)
+                }
+
+            };
+            &:nth-child(3) {
+                > a {
+                    .bgImg("../img","foudre.png",no-repeat,center)
+                }
+            };
+            &:nth-child(4) {
+                > a {
+                    .bgImg("../img","order.png",no-repeat,center)
+                }
+            };
+            &:nth-child(5) {
+                > a {
+                    .bgImg("../img","my.png",no-repeat,center)
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,119 @@
+@charset "utf-8";
+//获取公用的less表
+//参照物为home.less文件夹
+@import url("../../public/css/lib.less");
+
+div.jifenShopping_containWrap {
+    padding-top: 0.1px;
+    height: 100%;
+    position: relative;
+    //积分商城头部
+    > header.jifen_header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        height: 1.4062rem;
+        .lh(1.4062rem);
+        .bg(white);
+        text-align: center;
+        font-weight: bold;
+        .fS(0.5rem);
+        > img {
+            position: absolute;
+            top: 10%;
+            left: 0.3125rem;
+        }
+    }
+    //积分商城主体
+    main.jifen_main {
+        height: 100%;
+        overflow: scroll;
+        margin-top: 1.4062rem;
+        //积分饼图
+        > div.imgBgWrap {
+            .bg(white);
+            padding: 0.3125rem 0;
+            > div.imgBg {
+                margin: 0 auto;
+                width: 4.375rem;
+                height: 4.375rem;
+                border: 0.625rem solid orangered;
+                border-radius: 50%;
+                > div {
+                    width: 3.225rem;
+                    height: 3.225rem;
+                    border: 0.2rem solid #e13600;
+                    border-radius: 50%;
+                    margin-top: -0.0312rem;
+                    > div {
+                        text-align: center;
+                        padding-top: 0.625rem;
+                        > span {
+                            .fS(0.5rem);
+                            &:nth-child(1) {
+                                display: block;
+                                margin-bottom: 0.1562rem;
+                            }
+                            &:nth-child(2) {
+                                .c(orangered);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //积分详情
+        ul.jifenImgs {
+            display: flex;
+            > li {
+                .bg(white);
+                flex: 1 1 33.33%;
+                text-align: center;
+                > img {
+                    width: 0.7812rem;
+                    padding-top: 0.3125rem;
+                }
+                > span {
+                    padding: 0.3437rem 0;
+                    display: block;
+                    .fS(0.4062rem);
+                }
+                ~li {
+                    margin-left: 2px;
+                }
+            }
+        }
+        section.jifenjuanWrap {
+            margin-top: 0.3125rem;
+            //积分兑换卷
+            ul.jifenjuan {
+                display: flex;
+                margin-top:1px ;
+                > li {
+                    .bg(white);
+                    flex: 1 1 49%;
+                    &:first-child {
+                        border-right: 2px solid transparent;
+                    }
+                    border-bottom: 1px solid transparent;
+                    text-align: left;
+                    > img {
+                        width: 100%;
+                        margin: 0.1562rem 0;
+                    }
+                    > span {
+                        padding-top: 0.0625rem;
+                        height: 0.9843rem;
+                        display: block;
+                        .fS(0.4062rem);
+                        padding-left: 0.3125rem;
+                    }
+                    ~li {
+                        margin-left: 2px;
+                    }
+                }
+            }
+        }
+    }
+}

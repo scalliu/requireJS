@@ -1,0 +1,127 @@
+@charset "utf-8";
+.min-w {
+  min-width: 1200px;
+}
+.marginA {
+  margin: 0 auto;
+}
+.clearFloat {
+  zoom: 1;
+  /*为兼容IE6,IE7*/
+}
+.clearFloat::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}
+div.jifenShopping_containWrap {
+  padding-top: 0.1px;
+  height: 100%;
+  position: relative;
+}
+div.jifenShopping_containWrap > header.jifen_header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1.4062rem;
+  line-height: 1.4062rem;
+  background: #ffffff;
+  text-align: center;
+  font-weight: bold;
+  font-size: 0.5rem;
+}
+div.jifenShopping_containWrap > header.jifen_header > img {
+  position: absolute;
+  top: 10%;
+  left: 0.3125rem;
+}
+div.jifenShopping_containWrap main.jifen_main {
+  height: 100%;
+  overflow: scroll;
+  margin-top: 1.4062rem;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap {
+  background: #ffffff;
+  padding: 0.3125rem 0;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg {
+  margin: 0 auto;
+  width: 4.375rem;
+  height: 4.375rem;
+  border: 0.625rem solid orangered;
+  border-radius: 50%;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg > div {
+  width: 3.225rem;
+  height: 3.225rem;
+  border: 0.2rem solid #e13600;
+  border-radius: 50%;
+  margin-top: -0.0312rem;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg > div > div {
+  text-align: center;
+  padding-top: 0.625rem;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg > div > div > span {
+  font-size: 0.5rem;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg > div > div > span:nth-child(1) {
+  display: block;
+  margin-bottom: 0.1562rem;
+}
+div.jifenShopping_containWrap main.jifen_main > div.imgBgWrap > div.imgBg > div > div > span:nth-child(2) {
+  color: #ff4500;
+}
+div.jifenShopping_containWrap main.jifen_main ul.jifenImgs {
+  display: flex;
+}
+div.jifenShopping_containWrap main.jifen_main ul.jifenImgs > li {
+  background: #ffffff;
+  flex: 1 1 33.33%;
+  text-align: center;
+}
+div.jifenShopping_containWrap main.jifen_main ul.jifenImgs > li > img {
+  width: 0.7812rem;
+  padding-top: 0.3125rem;
+}
+div.jifenShopping_containWrap main.jifen_main ul.jifenImgs > li > span {
+  padding: 0.3437rem 0;
+  display: block;
+  font-size: 0.4062rem;
+}
+div.jifenShopping_containWrap main.jifen_main ul.jifenImgs > li ~ li {
+  margin-left: 2px;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap {
+  margin-top: 0.3125rem;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan {
+  display: flex;
+  margin-top: 1px ;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan > li {
+  background: #ffffff;
+  flex: 1 1 49%;
+  border-bottom: 1px solid transparent;
+  text-align: left;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan > li:first-child {
+  border-right: 2px solid transparent;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan > li > img {
+  width: 100%;
+  margin: 0.1562rem 0;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan > li > span {
+  padding-top: 0.0625rem;
+  height: 0.9843rem;
+  display: block;
+  font-size: 0.4062rem;
+  padding-left: 0.3125rem;
+}
+div.jifenShopping_containWrap main.jifen_main section.jifenjuanWrap ul.jifenjuan > li ~ li {
+  margin-left: 2px;
+}

@@ -1,0 +1,137 @@
+@charset "utf-8";
+.min-w {
+  min-width: 1200px;
+}
+.marginA {
+  margin: 0 auto;
+}
+.clearFloat {
+  zoom: 1;
+  /*为兼容IE6,IE7*/
+}
+.clearFloat::after {
+  content: ".";
+  visibility: hidden;
+  height: 0;
+  clear: both;
+  display: block;
+}
+header.ajx_header {
+  background: #ffd600;
+  min-height: 80px;
+  height: 1.4062rem;
+  line-height: 1.4062rem;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 33;
+}
+header.ajx_header > .header_sao {
+  position: absolute;
+  left: 0.1562rem;
+  top: 0;
+}
+header.ajx_header > .header_add {
+  margin: 0 auto;
+  font-size: 0.4375rem;
+  width: 100%;
+  text-align: center;
+}
+header.ajx_header > .header_search {
+  position: absolute;
+  right: 0.1562rem;
+  top: 0;
+  background-size: 80%;
+  background-image: url("../img/search.png");
+  background-repeat: no-repeat;
+  background-position: center 0.1562rem;
+}
+header.ajx_header > .header_search > span {
+  display: block;
+  line-height: 0;
+  margin-top: 1.0937rem;
+}
+div.index_containWrap {
+  position: relative;
+  height: 100%;
+  margin: 0 auto;
+}
+footer.ajx_headerWrap {
+  background: #ffffff;
+  z-index: 33;
+  margin: 0 auto;
+  overflow: hidden;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+footer.ajx_headerWrap .ajx_header {
+  display: flex;
+}
+footer.ajx_headerWrap .ajx_header > li {
+  flex: 1 1 1.7968rem;
+  text-align: center;
+}
+footer.ajx_headerWrap .ajx_header > li.active {
+  /* Safari and Chrome */
+}
+footer.ajx_headerWrap .ajx_header > li.active > a {
+  animation: mymove 500ms !important;
+  -webkit-animation: mymove 500ms !important;
+  /* Safari and Chrome */
+}
+@-webkit-keyframes mymove {
+  0% {
+    background-size: 40%;
+  }
+  25% {
+    background-size: 55%;
+  }
+  50% {
+    background-size: 50%;
+  }
+  75% {
+    background-size: 55%;
+  }
+  100% {
+    background-size: 40%;
+  }
+}
+footer.ajx_headerWrap .ajx_header > li.active:nth-child(1) > a {
+  background: url("../img/home2.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li.active:nth-child(2) > a {
+  background: url("../img/shop2.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li.active:nth-child(3) > a {
+  background: url("../img/foudre2.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li.active:nth-child(4) > a {
+  background: url("../img/order2.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li.active:nth-child(5) > a {
+  background: url("../img/my2.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li > a {
+  height: 1.65rem;
+  color: #777777;
+  padding-top: 1.3rem;
+  background-size: 40%;
+}
+footer.ajx_headerWrap .ajx_header > li:nth-child(1) > a {
+  background: url("../img/home.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li:nth-child(2) > a {
+  background: url("../img/shop.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li:nth-child(3) > a {
+  background: url("../img/foudre.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li:nth-child(4) > a {
+  background: url("../img/order.png") no-repeat center;
+}
+footer.ajx_headerWrap .ajx_header > li:nth-child(5) > a {
+  background: url("../img/my.png") no-repeat center;
+}
